@@ -9,7 +9,7 @@ $_['text_add']              = 'Add User';
 $_['text_edit']             = 'Edit User';
 
 // Column
-$_['column_username']       = 'Username';
+$_['column_username']       = 'Nombre de usuario';
 $_['column_status']         = 'Status';
 $_['column_date_added']     = 'Date Added';
 $_['column_action']         = 'Action';
