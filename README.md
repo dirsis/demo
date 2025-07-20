@@ -1,12 +1,12 @@
 Antes de Empezar
 -------------------------------
 Crear un rama
-git branch devdaniel (ejemplo)
+1. git branch devdaniel (ejemplo)
 ------------------------------
 Pasarse a rama
-git checkout devdaniel
+1. git checkout devdaniel
 ------------------------------
 Publicar cambios
-git add *
-git pull origin devdaniel
+1. git add *
+2. git pull origin devdaniel
 ------------------------------
