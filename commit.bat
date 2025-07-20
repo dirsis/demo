@@ -7,5 +7,5 @@ set datestr=%month%_%day%_%year%
 git add *
 git status
 git commit -m "%datestr%"
-git push origin main
+git push origin devbea
 pause

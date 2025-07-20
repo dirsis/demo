@@ -4,15 +4,15 @@ $_['heading_title']         = 'Users';
 
 // Text
 $_['text_success']          = 'Success: You have modified users!';
-$_['text_list']             = 'User List';
+$_['text_list']             = 'Listado de Usuarios';
 $_['text_add']              = 'Add User';
 $_['text_edit']             = 'Edit User';
 
 // Column
 $_['column_username']       = 'Nombre de usuario';
-$_['column_status']         = 'Status';
-$_['column_date_added']     = 'Date Added';
-$_['column_action']         = 'Action';
+$_['column_status']         = 'Estado';
+$_['column_date_added']     = 'Fecha de Alta';
+$_['column_action']         = 'Accion';
 
 // Entry
 $_['entry_username']        = 'Username';
