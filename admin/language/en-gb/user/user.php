@@ -10,11 +10,13 @@ $_['text_edit']             = 'Edit User';
 
 // Column
 $_['column_username']       = 'Nombre de usuario';
-$_['column_email']          = 'Correo Electronico';
-$_['column_user_group']          = 'Grupo de Usuario';
+$_['column_firstname']      = 'Nombre';
+$_['column_lastname']       = 'Apellido';
+$_['column_email']          = 'Correo electronico';
+$_['column_user_group']     = 'Grupo de usuario';
 $_['column_status']         = 'Estado';
-$_['column_date_added']     = 'Fecha de Alta';
-$_['column_action']         = 'Accion';
+$_['column_date_added']     = 'Fecha de alta';
+$_['column_action']         = 'Acción';
 
 // Entry
 $_['entry_username']        = 'Username';
