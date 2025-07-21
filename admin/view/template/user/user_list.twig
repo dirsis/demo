@@ -99,10 +99,21 @@
                     <input type="checkbox" name="selected[]" value="{{ user.user_id }}" />
                     {% endif %}</td>
                   <td class="text-left">{{ user.username }}</td>
-                  <!--daniel-->
+
+                  <!--Tarea Daniel-->
+                  
+                  <td class="text-left">{{ user.firstname }}</td>
+                  <td class="text-left">{{ user.lastname }}</td>
+                  <td class="text-left">{{ user.image }}</td>
+                  
+                  <!--Fin tarea Daniel-->
+
+                  <!--Modificación Diego-->
+
                   <td class="text-left">{{ user.email }}</td>
                   <td class="text-left">{{ user.user_group }}</td>
-                  <!--fin daniel-->
+
+                  <!--Fin modificación Diego-->
                   <td class="text-left">{{ user.status }}</td>
                   <td class="text-left">{{ user.date_added }}</td>
                   <td class="text-right"><a href="{{ user.edit }}" data-toggle="tooltip" title="{{ button_edit }}" class="btn btn-primary"><i class="fa fa-pencil"></i></a></td>
