@@ -11,6 +11,7 @@ $_['text_edit']             = 'Edit User';
 // Column
 $_['column_username']       = 'Nombre de usuario';
 $_['column_email']          = 'Correo Electronico';
+$_['column_user_group']          = 'Grupo de Usuario';
 $_['column_status']         = 'Estado';
 $_['column_date_added']     = 'Fecha de Alta';
 $_['column_action']         = 'Accion';
