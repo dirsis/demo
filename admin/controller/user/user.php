@@ -184,6 +184,7 @@ class ControllerUserUser extends Controller {
 				'firstname'  => $result['firstname'],
 				'lastname'   => $result['lastname'],
 				'image'   	 => $result['image'],
+				'thumb'   	 => $result['thumb'],
 				'user_group' => $result['user_group'],
 				'status'     => ($result['status'] ? $this->language->get('text_enabled') : $this->language->get('text_disabled')),
 				'date_added' => date($this->language->get('date_format_short'), strtotime($result['date_added'])),
@@ -416,6 +417,7 @@ class ControllerUserUser extends Controller {
 			$data['thumb'] = $this->model_tool_image->resize('no_image.png', 100, 100);
 		}
 		
+
 		$data['placeholder'] = $this->model_tool_image->resize('no_image.png', 100, 100);
 
 		if (isset($this->request->post['status'])) {
