@@ -54,9 +54,9 @@ class ModelUserUser extends Model {
 
 		error_reporting(E_ALL);
 		ini_set('display_errors', '1');
-				
-		$sql = "SELECT u,.*,g.name as user_group FROM " . DB_PREFIX . "user u 
-		INNER JOIN " . DB_PREFIX . "oc_user_group g 
+
+		$sql = "SELECT u.*,g.name as user_group FROM " . DB_PREFIX . "user u 
+		INNER JOIN " . DB_PREFIX . "user_group g 
 		ON u.user_group_id=g.user_group_id ";
 
 		$sort_data = array(
