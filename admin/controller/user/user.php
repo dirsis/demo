@@ -174,15 +174,23 @@ class ControllerUserUser extends Controller {
 		$results = $this->model_user_user->getUsers($filter_data);
 
 		foreach ($results as $result) {
+			
+			#		Modificaciones			#
+
 			$data['users'][] = array(
 				'user_id'    => $result['user_id'],
 				'username'   => $result['username'],
-				'email'   => $result['email'],
-				'user_group'   => $result['user_group'],
+				'email'   	 => $result['email'],
+				'firstname'  => $result['firstname'],
+				'lastname'   => $result['lastname'],
+				'image'   	 => $result['image'],
+				'user_group' => $result['user_group'],
 				'status'     => ($result['status'] ? $this->language->get('text_enabled') : $this->language->get('text_disabled')),
 				'date_added' => date($this->language->get('date_format_short'), strtotime($result['date_added'])),
 				'edit'       => $this->url->link('user/user/edit', 'user_token=' . $this->session->data['user_token'] . '&user_id=' . $result['user_id'] . $url, true)
 			);
+
+			#		Fin modificaciones		#
 		}
 
 		if (isset($this->error['warning'])) {

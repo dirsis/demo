@@ -65,12 +65,12 @@
 <!--Modificación Diego--> 
 
                   <td class="text-left">{% if sort == 'email' %}
-                    <a href="{{ sort_email }}" class="{{ order|lower }}">{{ column_email}}</a>
+                    <a href="{{ sort_email }}" class="{{ order|lower }}">{{ column_email }}</a>
                     {% else %}
                     <a href="{{ sort_email}}">{{ column_email }}</a>
                     {% endif %}</td>
                   <td class="text-left">{% if sort == 'user_group' %}
-                    <a href="{{ sort_user_group }}" class="{{ order|lower }}">{{ column_user_group}}</a>
+                    <a href="{{ sort_user_group }}" class="{{ order|lower }}">{{ column_user_group }}</a>
                     {% else %}
                     <a href="{{ sort_user_group}}">{{ column_user_group }}</a>
                     {% endif %}</td>                    
