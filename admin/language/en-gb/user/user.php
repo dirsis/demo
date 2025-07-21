@@ -29,6 +29,7 @@ $_['entry_lastname']        = 'Last Name';
 $_['entry_email']           = 'E-Mail';
 $_['entry_image']           = 'Image';
 $_['entry_status']          = 'Status';
+$_['entry_ean']             = 'Ean';
 
 // Error
 $_['error_permission']      = 'Warning: You do not have permission to modify users!';

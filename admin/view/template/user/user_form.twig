@@ -116,6 +116,15 @@
               </select>
             </div>
           </div>
+
+          <!-- Tarea 'ean' Daniel -->
+          <label class="col-sm-2 control-label" for="input-ean">{{ entry_ean }}</label>
+            <div class="col-sm-10">
+              <input type="text" name="ean" value="{{ ean }}" placeholder="{{ entry_ean }}" id="input-ean" class="form-control" />
+              {% if error_ean %}
+              <div class="text-danger">{{ error_ean }}</div>
+              {% endif %}
+            </div>
         </form>
       </div>
     </div>
