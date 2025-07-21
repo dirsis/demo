@@ -169,6 +169,9 @@ class ControllerUserUser extends Controller {
 
 		$user_total = $this->model_user_user->getTotalUsers();
 
+		error_reporting(E_ALL);
+		ini_set('display_errors', '1');
+
 		$results = $this->model_user_user->getUsers($filter_data);
 
 		foreach ($results as $result) {
