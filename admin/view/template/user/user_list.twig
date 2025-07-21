@@ -42,6 +42,7 @@
                     {% endif %}</td>
 
 <!--Tarea Daniel-->
+
                     <td class="text-left">{% if sort == 'firstname' %}
                     <a href="{{ sort_firstname }}" class="{{ order|lower }}">{{ column_firstname }}</a>
                     {% else %}
@@ -82,7 +83,7 @@
                     <a href="{{ sort_status }}">{{ column_status }}</a>
                     {% endif %}</td>
                   <td class="text-left">{% if sort == 'date_added' %}
-                    <a href="{{ sort_date_added }}" class="{{ order|lower }}">{{ column_date_added }}</a>
+                    <a href="{{ sort_date_added }}" class="{{ order|lower }}" data-toggle="image">{{ column_date_added }}</a>
                     {% else %}
                     <a href="{{ sort_date_added }}">{{ column_date_added }}</a>
                     {% endif %}</td>
