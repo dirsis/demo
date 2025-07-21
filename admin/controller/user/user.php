@@ -184,7 +184,7 @@ class ControllerUserUser extends Controller {
 			} else {
 				$thumb = $this->model_tool_image->resize('no_image.png', 100, 100);
 			}
-			print_r($thumb);
+			
 			$data['users'][] = array(
 				'user_id'    => $result['user_id'],
 				'username'   => $result['username'],
