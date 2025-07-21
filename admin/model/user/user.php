@@ -51,18 +51,20 @@ class ModelUserUser extends Model {
 	}
 
 	public function getUsers($data = array()) {
-		$sql = "SELECT * FROM `" . DB_PREFIX . "user`";
+		$sql = "SELECT u,*,g.name as user_group FROM " . DB_PREFIX . "user u 
+		INNER JOIN " . DB_PREFIX . "oc_user_group g 
+		ON u.user_group_id=g.user_group_id ";
 
 		$sort_data = array(
-			'username',
-			'status',
-			'date_added'
+			'u.username',
+			'u.status',
+			'u.date_added'
 		);
 
 		if (isset($data['sort']) && in_array($data['sort'], $sort_data)) {
 			$sql .= " ORDER BY " . $data['sort'];
 		} else {
-			$sql .= " ORDER BY username";
+			$sql .= " ORDER BY u.username";
 		}
 
 		if (isset($data['order']) && ($data['order'] == 'DESC')) {
