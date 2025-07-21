@@ -180,9 +180,9 @@ class ControllerUserUser extends Controller {
 			$this->load->model('tool/image');
 
 			if(!empty($result['image']) && is_file(DIR_IMAGE . $result['image'])) {
-				$thumb = $this->model_tool_image->resize($result['image'], 50, 50);
+				$thumb = $this->model_tool_image->resize($result['image'], 100, 100);
 			} else {
-				$thumb = $this->model_tool_image->resize('no_image', 50, 50);
+				$thumb = $this->model_tool_image->resize('no_image.png', 50, 50);
 			}
 
 			$data['users'][] = array(
@@ -191,8 +191,8 @@ class ControllerUserUser extends Controller {
 				'email'   	 => $result['email'],
 				'firstname'  => $result['firstname'],
 				'lastname'   => $result['lastname'],
-				'image'   	 => $result['image'],
 				'thumb'   	 => $result['thumb'],
+				'image'   	 => $result['image'],
 				'user_group' => $result['user_group'],
 				'status'     => ($result['status'] ? $this->language->get('text_enabled') : $this->language->get('text_disabled')),
 				'date_added' => date($this->language->get('date_format_short'), strtotime($result['date_added'])),
