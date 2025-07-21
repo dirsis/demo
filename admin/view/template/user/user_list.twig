@@ -70,6 +70,9 @@
                     <input type="checkbox" name="selected[]" value="{{ user.user_id }}" />
                     {% endif %}</td>
                   <td class="text-left">{{ user.username }}</td>
+                  <!--daniel-->
+                  <td class="text-left">{{ user.email }}</td>
+                  <!--fin daniel-->
                   <td class="text-left">{{ user.status }}</td>
                   <td class="text-left">{{ user.date_added }}</td>
                   <td class="text-right"><a href="{{ user.edit }}" data-toggle="tooltip" title="{{ button_edit }}" class="btn btn-primary"><i class="fa fa-pencil"></i></a></td>
