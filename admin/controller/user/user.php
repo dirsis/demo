@@ -111,6 +111,10 @@ class ControllerUserUser extends Controller {
 	}
 
 	protected function getList() {
+
+		error_reporting(E_ALL);
+		ini_set('display_errors', '1');
+		
 		if (isset($this->request->get['sort'])) {
 			$sort = $this->request->get['sort'];
 		} else {
