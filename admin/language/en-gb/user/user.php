@@ -12,7 +12,6 @@ $_['text_edit']             = 'Edit User';
 $_['column_username']       = 'Nombre de usuario';
 $_['column_firstname']      = 'Nombre';
 $_['column_lastname']       = 'Apellido';
-$_['column_image']          = 'Imagen':
 $_['column_email']          = 'Correo electronico';
 $_['column_user_group']     = 'Grupo de usuario';
 $_['column_status']         = 'Estado';
