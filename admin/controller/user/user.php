@@ -111,9 +111,6 @@ class ControllerUserUser extends Controller {
 	}
 
 	protected function getList() {
-
-		error_reporting(E_ALL);
-		ini_set('display_errors', '1');
 		
 		if (isset($this->request->get['sort'])) {
 			$sort = $this->request->get['sort'];
@@ -184,9 +181,9 @@ class ControllerUserUser extends Controller {
 			$this->load->model('tool/image');
 			
 			if (!empty($result['image']) && is_file(DIR_IMAGE . $result['image'])) {
-				$thumb = $this->model_tool_image->resize($result['image'], 100, 100);
+				$thumb = $this->model_tool_image->resize($result['image'], 50, 50);
 			} else {
-				$thumb = $this->model_tool_image->resize('no_image.png', 100, 100);
+				$thumb = $this->model_tool_image->resize('no_image.png', 50, 50);
 			}
 			
 			$data['users'][] = array(
