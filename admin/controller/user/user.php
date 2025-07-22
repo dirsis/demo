@@ -192,7 +192,7 @@ class ControllerUserUser extends Controller {
 				'email'   	 => $result['email'],
 				'firstname'  => $result['firstname'],
 				'lastname'   => $result['lastname'],
-				'thumb'   	 => $result['thumb'],
+				'thumb'   	 => $thumb,
 				'image'   	 => $result['image'],
 				'user_group' => $result['user_group'],
 				'status'     => ($result['status'] ? $this->language->get('text_enabled') : $this->language->get('text_disabled')),
