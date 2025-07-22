@@ -181,9 +181,9 @@ class ControllerUserUser extends Controller {
 			$this->load->model('tool/image');
 			
 			if (!empty($result['image']) && is_file(DIR_IMAGE . $result['image'])) {
-				$thumb = $this->model_tool_image->resize($result['image'], 50, 50);
+				$thumb = $this->model_tool_image->resize($result['image'], 100, 100);
 			} else {
-				$thumb = $this->model_tool_image->resize('no_image.png', 50, 50);
+				$thumb = $this->model_tool_image->resize('no_image.png', 100, 100);
 			}
 			
 			$data['users'][] = array(
