@@ -4,6 +4,10 @@ class ControllerUserUser extends Controller {
 
 	public function index() {
 		
+			error_reporting(E_ALL);
+	ini_set('display_errors', '1');
+		
+	
 		$this->load->language('user/user');
 
 		$this->document->setTitle($this->language->get('heading_title'));
