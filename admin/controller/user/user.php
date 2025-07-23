@@ -1,14 +1,16 @@
 <?php
 class ControllerUserUser extends Controller {
 	private $error = array();
-
+/* ESTA MAL ACA
 	error_reporting(E_ALL);
 	ini_set('display_errors', '1');
+*/
 
 	public function index() {
-		 
-
-		
+/*ACA SI
+	error_reporting(E_ALL);
+	ini_set('display_errors', '1');
+*/	
 
 		$this->load->language('user/user');
 
