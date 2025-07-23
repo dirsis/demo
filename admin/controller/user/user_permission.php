@@ -386,6 +386,10 @@ class ControllerUserUserPermission extends Controller {
 			$this->error['name'] = $this->language->get('error_name');
 		}
 
+		if ((utf8_strlen($this->request->post['ean']) < 3) || (utf8_strlen($this->request->post['ean']) > 20)) {
+			$this->error['ean'] = $this->language->get('error_ean');
+		}
+
 		return !$this->error;
 	}
 
