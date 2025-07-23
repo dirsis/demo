@@ -1,9 +1,10 @@
 <?php
 class ControllerUserUser extends Controller {
 	private $error = array();
+	
 	error_reporting(E_ALL);
 	ini_set('display_errors', '1');
-		
+
 	public function index() {
 		
 		$this->load->language('user/user');
