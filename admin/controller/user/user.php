@@ -1,12 +1,17 @@
 <?php
 class ControllerUserUser extends Controller {
 	private $error = array();
-	
+/* ESTA MAL ACA
 	error_reporting(E_ALL);
 	ini_set('display_errors', '1');
+*/
 
 	public function index() {
-		
+/*ACA SI
+	error_reporting(E_ALL);
+	ini_set('display_errors', '1');
+*/	
+
 		$this->load->language('user/user');
 
 		$this->document->setTitle($this->language->get('heading_title'));
@@ -116,6 +121,11 @@ class ControllerUserUser extends Controller {
 	}
 
 	protected function getList() {
+
+
+
+		ini_set('display_errors', 1);
+		error_reporting(E_ALL);
 
 		if (isset($this->request->get['sort'])) {
 			$sort = $this->request->get['sort'];

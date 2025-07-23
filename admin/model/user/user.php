@@ -51,10 +51,10 @@ class ModelUserUser extends Model {
 	}
 
 	public function getUsers($data = array()) {
-		/*
+		 
 		error_reporting(E_ALL);
 		ini_set('display_errors', '1');
-		*/
+	 
 		
 		$sql = "SELECT u.*,g.name as user_group FROM " . DB_PREFIX . "user u 
 		INNER JOIN " . DB_PREFIX . "user_group g 
