@@ -329,6 +329,21 @@ class ControllerUserUser extends Controller {
 			$data['error_email'] = '';
 		}
 
+		if (isset($this->error['lastname'])) {
+			$data['error_lastname'] = $this->error['lastname'];
+		} else {
+			$data['error_lastname'] = '';
+		}
+
+		# Modificación Daniel: ean
+
+		if (isset($this->error['ean'])) {
+			$data['error_ean'] = $this->error['ean'];
+		} else {
+			$data['error_ean'] = '';
+		}
+
+		# Fin modificación Daniel: ean
 		$url = '';
 
 		if (isset($this->request->get['sort'])) {
