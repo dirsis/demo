@@ -2,6 +2,8 @@
 class ModelUserUser extends Model {
 	public function addUser($data) {
 
+		error_reporting(E_ALL);
+		ini_set('display_errors', '1');
 		# Modifcación Daniel : agg ean
 
 		$this->db->query("INSERT INTO `" . DB_PREFIX . "user` SET username = '" . $this->db->escape($data['username']) . "', 
@@ -13,7 +15,7 @@ class ModelUserUser extends Model {
 														email = '" . $this->db->escape($data['email']) . "', 
 														image = '" . $this->db->escape($data['image']) . "', 
 														status = '" . (int)$data['status'] . "', 
-														date_added = NOW(), 
+														date_added = NOW()'" . "', 
 														ean = '" . $this->db->escape($data['ean']) ."'");
 		 
 		return $this->db->getLastId();
