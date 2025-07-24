@@ -3,6 +3,7 @@ class ModelUserUser extends Model {
 	public function addUser($data) {
 
 		# Modifcación Daniel : agg ean
+
 		$this->db->query("INSERT INTO `" . DB_PREFIX . "user` SET username = '" . $this->db->escape($data['username']) . "', 
 														user_group_id = '" . (int)$data['user_group_id'] . "',
 														salt = '" . $this->db->escape($salt = token(9)) . "', 
@@ -14,6 +15,7 @@ class ModelUserUser extends Model {
 														status = '" . (int)$data['status'] . "', 
 														date_added = NOW()'" . "', 
 														ean = '" . $this->db->escape($data['ean']) ."'");
+		
 		# Fin modificación Daniel : agg 
 		return $this->db->getLastId();
 	}
