@@ -13,9 +13,9 @@ class ModelUserUser extends Model {
 														lastname = '" . $this->db->escape($data['lastname']) . "', 
 														email = '" . $this->db->escape($data['email']) . "', 
 														image = '" . $this->db->escape($data['image']) . "', 
+														ean = '" . $this->db->escape($data['ean']) . "', 
 														status = '" . (int)$data['status'] . "', 
-														date_added = NOW()'" . "', 
-														ean = '" . $this->db->escape($data['ean']) ."'");
+														date_added = NOW()'";
 		 
 		return $this->db->getLastId();
 	}
