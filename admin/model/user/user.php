@@ -13,10 +13,9 @@ class ModelUserUser extends Model {
 														email = '" . $this->db->escape($data['email']) . "', 
 														image = '" . $this->db->escape($data['image']) . "', 
 														status = '" . (int)$data['status'] . "', 
-														date_added = NOW()'" . "', 
+														date_added = NOW(), 
 														ean = '" . $this->db->escape($data['ean']) ."'");
-		
-		# Fin modificación Daniel : agg 
+		 
 		return $this->db->getLastId();
 	}
 
@@ -30,6 +29,7 @@ class ModelUserUser extends Model {
 															ean = '" . $this->db->escape($data['ean']) . "', 
 															status = '" . (int)$data['status'] . "' WHERE user_id = '" . (int)$user_id . "'");
 
+		# Fin modificación Daniel : agg
 		if ($data['password']) {
 			$this->db->query("UPDATE `" . DB_PREFIX . "user` SET salt = '" . $this->db->escape($salt = token(9)) . "', password = '" . $this->db->escape(sha1($salt . sha1($salt . sha1($data['password'])))) . "' WHERE user_id = '" . (int)$user_id . "'");
 		}
