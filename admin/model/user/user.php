@@ -2,8 +2,7 @@
 class ModelUserUser extends Model {
 	public function addUser($data) {
 
-		error_reporting(E_ALL);
-		ini_set('display_errors', '1');
+		
 		# Modifcación Daniel : agg ean
 
 		$this->db->query("INSERT INTO `" . DB_PREFIX . "user` SET username = '" . $this->db->escape($data['username']) . "', 
