@@ -15,7 +15,7 @@ class ModelUserUser extends Model {
 														image = '" . $this->db->escape($data['image']) . "', 
 														ean = '" . $this->db->escape($data['ean']) . "', 
 														status = '" . (int)$data['status'] . "', 
-														date_added = NOW()'";
+														date_added = NOW()");
 		 
 		return $this->db->getLastId();
 	}
